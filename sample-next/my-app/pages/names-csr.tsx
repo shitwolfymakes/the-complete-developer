@@ -8,6 +8,10 @@ type responseItemType = {
     name: string;
 };
 
+// TODO:
+// This is exactly as written in the book, which now fails since CORS
+// has tightened. To fix the endless loop, and `, []` to the useEffect.
+// To bypass CORS issues route through /api/names
 const NamesCSR: NextPage = () => {
     const [data, setData] = useState<responseItemType[] | []>();
 
