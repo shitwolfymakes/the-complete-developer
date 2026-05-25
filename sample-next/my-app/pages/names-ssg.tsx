@@ -44,7 +44,12 @@ export const getStaticProps: GetStaticProps = async (
         names = await fetchNames();
     } catch (err) {}
 
-    return { props: {names} };
+    return {
+        props: {
+            names,
+            revalidate: 30 // This enables Incremental Static Regeneration
+        }
+    };
 };
 
 export default NamesSSG;
