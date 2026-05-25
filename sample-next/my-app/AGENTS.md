@@ -1,5 +1,7 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# Project notes
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+This project is pinned to **Next.js 12.3.4** (Pages Router) to follow along with *The Complete Developer*. React is pinned to 18.2.0.
+
+- **Node version: 18.x** (LTS contemporary with Next 12). Pinned via `.nvmrc`. Newer Node (20+, 24) causes `next dev` to hang silently. Run `nvm use` in this directory before any `next` command.
+- Use **Pages Router** conventions only (`pages/`, `pages/api/`). No `app/` directory.
+- Do **not** run `create-next-app` to regenerate — it ignores the `@12` version pin and scaffolds Next 16. Manage versions by editing `package.json` directly and running `npm install`.
