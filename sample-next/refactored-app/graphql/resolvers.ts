@@ -15,8 +15,8 @@ export const resolvers = {
         }
     },
     Mutation: {
-        weather: async (_: any, param: WeatherInterface) => {
-            return [db.find((item) => item.zip === param.zip)];
+        weather: async (_: any, param: { data: WeatherInterface}) => {
+            return [db.find((item) => item.zip === param.data.zip)];
         }
     }
 };
