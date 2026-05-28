@@ -42,3 +42,5 @@ const allowCors =
 //         return await fn(req, res);
 //     };
 // };
+
+export default allowCors(handler);
