@@ -15,7 +15,7 @@ export const typeDefs = gql`
         friends: [FriendsType]!
     }
     
-    type LocationWeatherInput {
+    input LocationWeatherInput {
         zip: String!
         weather: String
         tempC: String
@@ -27,7 +27,7 @@ export const typeDefs = gql`
         weather(zip: String): [LocationWeatherType]!
     }
 
-    type Mutator {
+    type Mutation {
         weather(data: LocationWeatherInput): [LocationWeatherType]!
     }
 `;
