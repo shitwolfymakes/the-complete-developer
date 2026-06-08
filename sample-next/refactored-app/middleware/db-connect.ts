@@ -1,14 +1,43 @@
 import mongoose from "mongoose";
 import { MongoMemoryServer } from "mongodb-memory-server";
+import { storeDocument } from "../mongoose/weather/services";
 
 async function dbConnect(): Promise<any | String> {
     const mongoServer = await MongoMemoryServer.create();
     const MONGOIO_URI = mongoServer.getUri();
     // teardown any existing db connection first
     await mongoose.disconnect();
+    
     // open a fresh connection to the db
     await mongoose.connect(MONGOIO_URI, {
         dbName: "weather",
+    });
+
+    // seed the db with some data
+    await storeDocument({
+        zip: "96815",
+        weather: "sunny",
+        tempC: "25C",
+        tempF: "70F",
+        friends: ["96814", "96826"],
+    });
+
+    // seed the db with some data
+    await storeDocument({
+        zip: "96814",
+        weather: "rainy",
+        tempC: "20C",
+        tempF: "68F",
+        friends: ["96815", "96826"],
+    });
+
+    // seed the db with some data
+    await storeDocument({
+        zip: "96826",
+        weather: "rainy",
+        tempC: "30C",
+        tempF: "86F",
+        friends: ["96815", "96814"],
     });
 };
 
