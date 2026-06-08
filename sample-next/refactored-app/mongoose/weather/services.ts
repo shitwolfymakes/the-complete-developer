@@ -31,3 +31,13 @@ export async function updateByZip(paramZip: string, newData: WeatherInterface):
     }
     return false;
 }
+
+export async function deleteByZip(paramZip: string): Promise<boolean> {
+    try {
+        await WeatherModel.deleteOne({zip: paramZip});
+        return true;
+    } catch (err) {
+        console.log(err);
+    }
+    return false;
+}
