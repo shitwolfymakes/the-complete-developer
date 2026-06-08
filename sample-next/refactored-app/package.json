@@ -13,6 +13,8 @@
     "@as-integrations/next": "^4.1.0",
     "graphql": "^16.14.1",
     "graphql-tag": "^2.12.6",
+    "mongodb-memory-server": "^11.2.0",
+    "mongoose": "^9.6.3",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6"
