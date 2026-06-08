@@ -11,3 +11,5 @@ async function dbConnect(): Promise<any | String> {
         dbName: "weather",
     });
 };
+
+export default dbConnect;
