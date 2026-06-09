@@ -30,7 +30,7 @@ export const LocationSchema: Schema = new Schema<LocationType>({
         required: true,
     },
     on_wishlist: {
-        type: "String",
+        type: [String],
         required: true,
     },
     location_id: {

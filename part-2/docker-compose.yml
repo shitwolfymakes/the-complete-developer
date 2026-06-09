@@ -22,8 +22,7 @@ services:
         image: mongo:latest
         restart: always
         environment:
-            DB_NAME: foodfinder
-            MONGODB_INIT_DATABASE: foodfinder
+            MONGO_INITDB_DATABASE: foodfinder
         ports:
             - 27017:27017
         volumes:
