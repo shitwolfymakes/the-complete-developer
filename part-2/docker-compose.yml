@@ -26,7 +26,7 @@ services:
         ports:
             - 27017:27017
         volumes:
-            - ./.docker/foodfinder-backend/seed-mongodb.js:/docker-entrypoint.initdb.d/seed-mongodb.js
+            - ./.docker/foodfinder-backend/seed-mongodb.js:/docker-entrypoint-initdb.d/seed-mongodb.js
             - mongodb_data_container:/data/db
 
 volumes:
