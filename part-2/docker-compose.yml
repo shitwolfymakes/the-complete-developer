@@ -15,7 +15,7 @@ services:
         - CHOKIDAR_INTERVAL=100
       tty: true
       command: "npm run dev"
-      user: ${MY_USER}
+      user: 1000:1000
 
     backend:
         container_name: foodfinder-backend
