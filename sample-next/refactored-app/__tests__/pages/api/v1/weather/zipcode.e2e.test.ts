@@ -1,5 +1,5 @@
 /**
- * @jest-enviroment node
+ * @jest-environment node
  */
 
 jest.setTimeout(20000);
