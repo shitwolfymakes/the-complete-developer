@@ -20,7 +20,7 @@
     "jsx": "react-jsx",
     "incremental": true,
     "rootDir": "./",
-    "types": ["jest"]
+    "types": ["jest", "node"]
   },
   "include": [
     "next-env.d.ts",
