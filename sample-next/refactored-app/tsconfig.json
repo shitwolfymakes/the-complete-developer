@@ -19,7 +19,8 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "rootDir": "./"
+    "rootDir": "./",
+    "types": ["jest"]
   },
   "include": [
     "next-env.d.ts",
