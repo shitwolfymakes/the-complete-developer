@@ -1,2 +1,5 @@
-const sum = (a: number, b: number): number => a + b;
+const sum = (data: number[]): number => {
+    return data.reduce((a, b) => a + b);
+};
+
 export { sum };
