@@ -9,10 +9,10 @@ describe("the sum function", () => {
         expect(result).toBe(expectation);
     });
 
-    test("minus eight plus four is four", () => {
+    test("minus eight plus four is minus four", () => {
         let first = -8;
         let second = 4;
-        let expectation = 4;
+        let expectation = -4;
         let result = sum(first, second);
         expect(result).toBe(expectation);
     });
