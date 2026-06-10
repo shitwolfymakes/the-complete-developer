@@ -5,7 +5,7 @@ interface PropsInterface {
     location: LocationType;
 }
 
-const locationDetail = (props: PropsInterface) => {
+const LocationDetail = (props: PropsInterface) => {
     let location = props.location;
     return (
         <div>
@@ -36,3 +36,5 @@ const locationDetail = (props: PropsInterface) => {
         </div>
     );
 };
+
+export default LocationDetail;
