@@ -54,3 +54,5 @@ export const getServerSideProps: GetServerSideProps = async (
         props: { data: { location: JSON.stringify(locations.pop()) } },
     };
 };
+
+export default Location;
